@@ -1,4 +1,3 @@
-const { json } = require('body-parser');
 const express = require('express');
 const fs = require('fs');
 
@@ -7,13 +6,18 @@ const app = express();
 
 var cars;
 
-fs.readFile('cars.json', 'utf8', (err, data) => {
-    if (err) {
-        console.error('Error reading file:', err);
-        return;
-    }
-    cars = JSON.parse(data);
-});
+const loadCars = () => {
+    fs.readFile('cars.json', 'utf8', (err, data) => {
+        if (err) {
+            console.error('Error reading file:', err);
+            return;
+        }
+        cars = JSON.parse(data);
+    });
+}
+
+loadCars();
+
 
 app.use(express.json());
 
