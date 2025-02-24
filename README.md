@@ -67,7 +67,7 @@ Here is an example response:
 ]
 ```
 ## UML Sequence Diagram
-![image](https://github.com/user-attachments/assets/ea6bef43-ab3d-45cd-923d-a6d368897d1b)
+![image](https://github.com/user-attachments/assets/200c5210-ffde-42e9-bb48-9742ffdf0ecd)
 
 ## Running the Microservice
 1. Install Node.js if not already installed
